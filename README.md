@@ -1,3 +1,3 @@
 # infovis
 
-https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet
+[md cheatsheet](https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet)

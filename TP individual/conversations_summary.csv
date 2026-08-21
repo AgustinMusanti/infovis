@@ -1,0 +1,262 @@
+date,hour,day_of_week,month,year,title,n_messages_total,n_messages_human,n_messages_assistant,user_text_length
+2026-01-12,22,Monday,2026-01,2026,Visualizaciones de control presupuestario en Power BI,2,1,1,189
+2026-01-12,22,Monday,2026-01,2026,,14,7,7,4142
+2026-01-13,12,Tuesday,2026-01,2026,Dashboard de control de gestión Q4: presupuesto vs real,6,3,3,2364
+2026-01-13,18,Tuesday,2026-01,2026,Análisis de P&L: cómo empezar,10,5,5,1271
+2026-01-13,18,Tuesday,2026-01,2026,Conectar a hoja de cálculo en Google Drive,2,1,1,66
+2026-01-13,23,Tuesday,2026-01,2026,Análisis del precio de Solana y estrategia de trading,2,1,1,131
+2026-01-14,12,Wednesday,2026-01,2026,Adaptación de CV para Data & Analytics en ICBC,24,20,4,70545
+2026-01-14,18,Wednesday,2026-01,2026,Crear un agente personalizado para armar CV,10,5,5,5105
+2026-01-15,12,Thursday,2026-01,2026,,2,1,1,3707
+2026-01-15,13,Thursday,2026-01,2026,Ingresos pasivos con especialización en datos,4,2,2,691
+2026-01-15,14,Thursday,2026-01,2026,Mejor momento para publicar ascenso en LinkedIn,2,1,1,199
+2026-01-16,15,Friday,2026-01,2026,Adaptación de CV para Analista Senior Planeamiento Financiero MercadoLibre,12,6,6,3919
+2026-01-18,21,Sunday,2026-01,2026,Automatizar tareas financieras con Python,38,19,19,3928
+2026-01-20,14,Tuesday,2026-01,2026,Comparador de rendimiento SPY vs activos,4,2,2,569
+2026-01-24,19,Saturday,2026-01,2026,Claude desktop vs web para análisis de datos,2,1,1,315
+2026-01-24,19,Saturday,2026-01,2026,Conectar a archivo Excel,2,1,1,37
+2026-01-24,21,Saturday,2026-01,2026,Optimizar header de LinkedIn con IA,8,4,4,1137
+2026-01-25,15,Sunday,2026-01,2026,Registro de ingresos y gastos para clasificador de granos,44,37,7,31177
+2026-01-27,17,Tuesday,2026-01,2026,Emprendimiento en tiempo libre,14,7,7,5101
+2026-01-28,19,Wednesday,2026-01,2026,Automatizar obtención de datos de letras del tesoro desde Google Sheets,20,10,10,3116
+2026-02-04,1,Wednesday,2026-02,2026,Pricing a Python script for enterprise use,14,7,7,2739
+2026-02-05,14,Thursday,2026-02,2026,Diferencia entre USDT y USDC,4,2,2,314
+2026-02-14,18,Saturday,2026-02,2026,CV para analista de prevención de fraude en Mercado Libre,8,4,4,4787
+2026-02-14,18,Saturday,2026-02,2026,Ajustes de CV: límite de páginas y links,4,2,2,1518
+2026-02-14,18,Saturday,2026-02,2026,Optimizar CV para analista de datos en prevención de fraude,4,2,2,3608
+2026-02-18,22,Wednesday,2026-02,2026,Flujo de caja proyectado con window functions en SQL Server,8,4,4,1554
+2026-02-20,1,Friday,2026-02,2026,Calculadora LECAPs con análisis de rendimiento en pesos y dólares,2,1,1,3555
+2026-02-21,23,Saturday,2026-02,2026,Costo de Claude artifacts,2,1,1,32
+2026-02-21,23,Saturday,2026-02,2026,Calculadora LECAPs con datos de Google Sheets,2,1,1,2747
+2026-02-21,23,Saturday,2026-02,2026,Calculadora de tasas y devaluación en HTML,10,5,5,10367
+2026-02-22,21,Sunday,2026-02,2026,Ordenar top de peores performances en script Python,2,1,1,432
+2026-02-26,16,Thursday,2026-02,2026,Crear skill de finanzas e inversiones,6,3,3,1067
+2026-02-27,0,Friday,2026-02,2026,Actualizar estructura Excel para dos socios y mano de obra,16,8,8,2460
+2026-02-28,13,Saturday,2026-02,2026,Estrategia de cierre en trade de Netflix,34,17,17,2679
+2026-02-28,18,Saturday,2026-02,2026,Mejora de skill para generador de CVs argentino,10,5,5,4380
+2026-02-28,19,Saturday,2026-02,2026,Preparar CV para posición de análisis en Mercado Libre Fintech,4,2,2,3479
+2026-03-01,13,Sunday,2026-03,2026,SaaS de gestión ganadera para productores argentinos,10,5,5,2093
+2026-03-02,0,Monday,2026-03,2026,Cursos de Anthropic para analista de datos,6,3,3,547
+2026-03-02,23,Monday,2026-03,2026,Conectar APIs desde IA,6,3,3,128
+2026-03-03,14,Tuesday,2026-03,2026,Costo de matrícula diplomatura en ciencia de datos,4,2,2,144
+2026-03-04,0,Wednesday,2026-03,2026,Construyendo un stack técnico-financiero con APIs,2,1,1,186
+2026-03-04,16,Wednesday,2026-03,2026,Análisis de proyección del ADR Edenor,2,1,1,198
+2026-03-05,1,Thursday,2026-03,2026,Asignación óptima de cartera agresiva a largo plazo,4,2,2,665
+2026-03-06,18,Friday,2026-03,2026,Simulador de aprobación de préstamos con visualización en Jupyter,8,4,4,6099
+2026-03-06,18,Friday,2026-03,2026,Simulador de aprobación de préstamos en Python,4,2,2,4499
+2026-03-08,0,Sunday,2026-03,2026,Script SQL Server para dataset de fintech con análisis,2,1,1,2376
+2026-03-09,15,Monday,2026-03,2026,App de gestión de compras con parsing inteligente,8,4,4,3326
+2026-03-10,14,Tuesday,2026-03,2026,Certificación en ciencia de datos para analista en PwC,14,7,7,6699
+2026-03-11,17,Wednesday,2026-03,2026,Rebalancear cartera: vender Edenor por MercadoLibre,2,1,1,309
+2026-03-11,19,Wednesday,2026-03,2026,Análisis fundamental de Nike y su caída de precio,2,1,1,135
+2026-03-12,22,Thursday,2026-03,2026,Mejoras al skill de armado de CV,32,16,16,7874
+2026-03-15,22,Sunday,2026-03,2026,Ajuste en formato de CV,22,11,11,3810
+2026-03-15,23,Sunday,2026-03,2026,Alertas automáticas de precio para Bitcoin sin programar,6,3,3,2000
+2026-03-16,23,Monday,2026-03,2026,Armando CV para ACA Valores,6,3,3,1602
+2026-03-18,22,Wednesday,2026-03,2026,Optimización de segmentación de usuarios por actividad,2,1,1,4220
+2026-03-19,14,Thursday,2026-03,2026,Análisis de perfil para fintech y datos,16,8,8,3788
+2026-03-19,17,Thursday,2026-03,2026,CV para Data Analyst de riesgo crediticio,4,2,2,2109
+2026-03-19,18,Thursday,2026-03,2026,Optimizar skill de creación de CV,6,3,3,3158
+2026-03-19,18,Thursday,2026-03,2026,CV para Data Analyst en finanzas,4,2,2,2023
+2026-03-19,18,Thursday,2026-03,2026,Conectar GitHub con IA,2,1,1,42
+2026-03-19,18,Thursday,2026-03,2026,Probando conexión con GitHub,4,2,2,51
+2026-03-19,22,Thursday,2026-03,2026,Analista de datos para prevención de fraude en Mercado Libre,8,4,4,6835
+2026-03-20,13,Friday,2026-03,2026,Validación de CV para filtros ATS,2,1,1,279
+2026-03-21,21,Saturday,2026-03,2026,Postularse con experiencia parcial en ofertas de empleo,2,1,1,242
+2026-03-21,21,Saturday,2026-03,2026,CV para Analista de Operaciones Comerciales en De Campo a Campo,6,3,3,2618
+2026-03-22,14,Sunday,2026-03,2026,Bonos argentinos ajustados por CER,4,2,2,246
+2026-03-23,13,Monday,2026-03,2026,Preguntar salario antes de la entrevista,8,4,4,2389
+2026-03-23,20,Monday,2026-03,2026,Posgrado en negocios internacionales: ¿es adecuado para mí?,6,3,3,425
+2026-03-24,1,Tuesday,2026-03,2026,Analista de transformación digital en BYMA,12,6,6,4061
+2026-03-25,19,Wednesday,2026-03,2026,Reescritura de perfil profesional en CV,2,1,1,1117
+2026-03-26,0,Thursday,2026-03,2026,Preparar CV para Middle Office Analyst en Inviu,6,3,3,1649
+2026-03-26,0,Thursday,2026-03,2026,CV para Middle Office Analyst en Inviu,4,2,2,1686
+2026-03-26,1,Thursday,2026-03,2026,CV para Middle Office Analyst en Inviu,8,4,4,2391
+2026-03-26,14,Thursday,2026-03,2026,Certificados en la sección educación de LinkedIn,14,7,7,818
+2026-03-28,18,Saturday,2026-03,2026,CV para Analista Senior de Growth en Mercado Libre Fintech,4,2,2,3273
+2026-03-28,22,Saturday,2026-03,2026,CV para analista de datos en prevención de fraude,6,3,3,4141
+2026-04-01,16,Wednesday,2026-04,2026,Caída de Nike a 45 dólares el 1 de abril,2,1,1,80
+2026-04-08,20,Wednesday,2026-04,2026,Crear curriculum para portal de empleos,6,3,3,1072
+2026-04-09,0,Thursday,2026-04,2026,Dashboard de monitoreo para fintech,10,5,5,1371
+2026-04-09,1,Thursday,2026-04,2026,Explicación breve solicitada,10,5,5,185
+2026-04-13,20,Monday,2026-04,2026,Resolución sencilla de problema,2,1,1,73
+2026-04-16,18,Thursday,2026-04,2026,Aplicar comunicación no violenta,10,5,5,436
+2026-04-17,0,Friday,2026-04,2026,Valor de inversión con opción de venta protectora,4,2,2,344
+2026-04-19,19,Sunday,2026-04,2026,Reinversión de letra vencida en cartera moderada,10,5,5,1088
+2026-04-21,1,Tuesday,2026-04,2026,Optimizar perfil de LinkedIn como analista de datos,8,4,4,3041
+2026-04-21,17,Tuesday,2026-04,2026,Conectar archivos y actualizaciones en suscripción,4,2,2,327
+2026-04-21,22,Tuesday,2026-04,2026,Consulta de cartera y rendimientos en IOL,22,11,11,995
+2026-04-22,19,Wednesday,2026-04,2026,Armar CV para oferta de IA en empresa energética,4,2,2,1333
+2026-04-22,23,Wednesday,2026-04,2026,CV para analista de negocio en Mercado Libre,8,4,4,4376
+2026-04-22,23,Wednesday,2026-04,2026,Análisis de inversiones mensuales en InvertirOnline,9,4,5,521
+2026-04-23,18,Thursday,2026-04,2026,Armar CV para portal de empleo de Galicia,10,5,5,2859
+2026-04-23,23,Thursday,2026-04,2026,Actualizar perfil profesional y certificaciones en CV,2,1,1,373
+2026-04-23,23,Thursday,2026-04,2026,Preparar CV para portal de empleo InvertirOnline,6,3,3,184
+2026-04-24,19,Friday,2026-04,2026,CV para asesor financiero independiente en Balanz,6,3,3,978
+2026-04-25,13,Saturday,2026-04,2026,Rendimiento del bono argentino AO27 en dólares,6,3,3,603
+2026-04-25,16,Saturday,2026-04,2026,Retorno de inversión en SPY500 a 15 años,2,1,1,98
+2026-04-27,18,Monday,2026-04,2026,Elegir una de las 7 magnificas para invertir,2,1,1,204
+2026-04-27,19,Monday,2026-04,2026,Preparar CV para Bavsa,10,5,5,1872
+2026-04-28,1,Tuesday,2026-04,2026,CV para analista de negocio en Mercado Libre,6,3,3,3944
+2026-04-28,23,Tuesday,2026-04,2026,Apalancarse en ciencia de datos,4,2,2,223
+2026-04-29,19,Wednesday,2026-04,2026,Decisión de cambio laboral: presencialidad vs. crecimiento,12,6,6,4003
+2026-04-29,23,Wednesday,2026-04,2026,Resolución de consultas SQL,54,27,27,5081
+2026-04-30,15,Thursday,2026-04,2026,Inversión en acciones magnificas a mediano plazo,4,2,2,363
+2026-04-30,19,Thursday,2026-04,2026,Consulta de dividendos en IOL,2,1,1,75
+2026-04-30,19,Thursday,2026-04,2026,Perspectiva de Tesla a largo plazo,2,1,1,53
+2026-04-30,19,Thursday,2026-04,2026,Precio promedio de compra de MELI,4,2,2,234
+2026-04-30,21,Thursday,2026-04,2026,Opinión sobre una cartera,2,1,1,27
+2026-05-04,15,Monday,2026-05,2026,Proyecto práctico con conector IOL para LinkedIn,4,2,2,208
+2026-05-04,23,Monday,2026-05,2026,Diseño de almacén de datos para empresa de muebles,10,5,5,1628
+2026-05-05,21,Tuesday,2026-05,2026,Análisis de perfil LinkedIn desde perspectiva fintech,2,1,1,268
+2026-05-05,22,Tuesday,2026-05,2026,Optimización estructural del CV: jerarquía visual y escaneo,6,3,3,6199
+2026-05-05,22,Tuesday,2026-05,2026,CV para analista de créditos en Mercado Libre,4,2,2,3665
+2026-05-05,23,Tuesday,2026-05,2026,Analista de créditos en MercadoLibre,4,2,2,3652
+2026-05-06,13,Wednesday,2026-05,2026,Preparar CV para analista de créditos en MercadoLibre,6,3,3,3725
+2026-05-06,13,Wednesday,2026-05,2026,Conectar IOL a Python para análisis,0,0,0,0
+2026-05-07,13,Thursday,2026-05,2026,Comparación simple de bonos argentinos A027 y A028,8,4,4,4406
+2026-05-07,21,Thursday,2026-05,2026,CV para analista de créditos en MercadoLibre,6,3,3,3738
+2026-05-07,21,Thursday,2026-05,2026,Modelo de CV recomendado para Argentina,4,2,2,250
+2026-05-07,22,Thursday,2026-05,2026,Optimizar CV con cambios puntuales,6,3,3,1029
+2026-05-07,22,Thursday,2026-05,2026,Optimizar CV para Analista de Créditos Mercado Libre,6,3,3,1051
+2026-05-07,22,Thursday,2026-05,2026,Optimizar CV para tech mode,6,3,3,597
+2026-05-07,22,Thursday,2026-05,2026,Optimizar CV para Analista de Créditos en Mercado Libre,6,3,3,4739
+2026-05-07,23,Thursday,2026-05,2026,Evaluación de perfil LinkedIn para fintech,22,11,11,1748
+2026-05-08,2,Friday,2026-05,2026,Actualización de CV: experiencia PwC y secciones técnicas,4,2,2,4791
+2026-05-08,21,Friday,2026-05,2026,Honorarios del escribano en venta de inmueble,4,2,2,263
+2026-05-09,13,Saturday,2026-05,2026,Optimización de reparaciones DPF en data warehousing,9,4,5,2381
+2026-05-09,14,Saturday,2026-05,2026,Distribución de inversión de US$42.000 en cartera moderada,2,1,1,211
+2026-05-09,20,Saturday,2026-05,2026,Análisis de bonos argentinos en USD con Python,16,8,8,3105
+2026-05-10,18,Sunday,2026-05,2026,Script Python para análisis de bonos argentinos,8,4,4,1745
+2026-05-11,19,Monday,2026-05,2026,Consultas SQL sobre base de datos adjunta,60,30,30,3077
+2026-05-11,20,Monday,2026-05,2026,Inversión en bonos argentinos a un año,4,2,2,542
+2026-05-12,18,Tuesday,2026-05,2026,Proyecto data warehousing para Ford,4,2,2,489
+2026-05-12,21,Tuesday,2026-05,2026,CV BUENO ,16,8,8,6604
+2026-05-12,21,Tuesday,2026-05,2026,Esquema de color tech para CV,8,4,4,2025
+2026-05-12,23,Tuesday,2026-05,2026,Modelo conceptual para data warehouse,58,29,29,5180
+2026-05-14,1,Thursday,2026-05,2026,Comparación de aspiradoras robot,2,1,1,484
+2026-05-14,22,Thursday,2026-05,2026,Cedears en pesos vs dólares: dónde invertir,12,6,6,791
+2026-05-14,22,Thursday,2026-05,2026,Inversión en FCI BLATAM a un año,2,1,1,86
+2026-05-15,19,Friday,2026-05,2026,Informe macroeconómico de México con análisis de datos cuantitativos,6,3,3,1758
+2026-05-16,19,Saturday,2026-05,2026,Preparar CV para Invoice to Collect SSR en Mercado Libre,10,5,5,3921
+2026-05-16,19,Saturday,2026-05,2026,Invoice to Collect SSR en Mercado Libre,4,2,2,2805
+2026-05-16,19,Saturday,2026-05,2026,Respuestas y explicaciones del módulo DW & OLAP,24,12,12,1534
+2026-05-16,19,Saturday,2026-05,2026,CV para Invoice to Collect SSr Analyst en Mercado Libre,6,3,3,3018
+2026-05-18,15,Monday,2026-05,2026,FCI en dólares para invertir desde Balanz,8,4,4,778
+2026-05-18,18,Monday,2026-05,2026,Actualizar skill de armado de CV respetando estructura,10,5,5,2382
+2026-05-18,18,Monday,2026-05,2026,Preparar CV para Invoice to Collect en Mercado Libre,4,2,2,2788
+2026-05-18,23,Monday,2026-05,2026,CV para Analista de Gestión Comercial en Mercado Libre,4,2,2,2931
+2026-05-19,0,Tuesday,2026-05,2026,CV para Analista Gestión Comercial en Mercado Libre,2,1,1,2880
+2026-05-19,17,Tuesday,2026-05,2026,Armar CV en modo tech para ICBC,8,4,4,4383
+2026-05-20,0,Wednesday,2026-05,2026,Base de datos PostgreSQL para análisis de reclamos vehiculares,16,8,8,8746
+2026-05-20,19,Wednesday,2026-05,2026,Rebalancear cartera: vender Apple para invertir en NU,10,5,5,1360
+2026-05-20,22,Wednesday,2026-05,2026,CV para analista de desarrollo de negocio en Mercado Pago,14,7,7,6119
+2026-05-20,23,Wednesday,2026-05,2026,Preparación para presentación de optimización DPF,2,1,1,368
+2026-05-21,1,Thursday,2026-05,2026,Renombrar carpeta en GitHub,2,1,1,144
+2026-05-26,14,Tuesday,2026-05,2026,Predicciones realistas del mundial 2026,6,3,3,400
+2026-05-27,17,Wednesday,2026-05,2026,Estrategia de venta y rotación en YPF,4,2,2,263
+2026-05-27,22,Wednesday,2026-05,2026,Explicación de conceptos de R para IA y ML,14,7,7,621
+2026-05-27,23,Wednesday,2026-05,2026,Crear dataset de cangrejos con características específicas,12,6,6,765
+2026-05-28,0,Thursday,2026-05,2026,Dataset para análisis exploratorio de datos económicos,82,41,41,11978
+2026-05-29,15,Friday,2026-05,2026,Coherencia del ratio de reinversión,10,5,5,751
+2026-05-29,23,Friday,2026-05,2026,Rotación de ganancias hacia acciones con dividendos,2,1,1,146
+2026-05-31,0,Sunday,2026-05,2026,Análisis de sistema de registro de inversiones,18,9,9,2428
+2026-06-02,0,Tuesday,2026-06,2026,Revisión de trabajo práctico de análisis exploratorio de datos,2,1,1,373
+2026-06-02,17,Tuesday,2026-06,2026,Mejoras para perfil de LinkedIn y sección de educación,34,17,17,6363
+2026-06-03,22,Wednesday,2026-06,2026,Árbol de decisión básico para data science,12,6,6,1165
+2026-06-04,14,Thursday,2026-06,2026,Cloud Code para principiantes sin experiencia,14,7,7,1224
+2026-06-04,18,Thursday,2026-06,2026,Opinión sobre cartera de inversión diversificada,20,10,10,1695
+2026-06-04,21,Thursday,2026-06,2026,Cálculo de inversión para rendimiento mensual,2,1,1,84
+2026-06-05,14,Friday,2026-06,2026,Análisis de compra de Bitcoin a corto plazo,10,5,5,720
+2026-06-06,1,Saturday,2026-06,2026,Usos alternativos de cowork para tu situación,6,3,3,816
+2026-06-07,20,Sunday,2026-06,2026,Análisis de inversiones y interés compuesto,2,1,1,349
+2026-06-08,14,Monday,2026-06,2026,Negociación de sueldo en reunión de feedback,2,1,1,799
+2026-06-08,23,Monday,2026-06,2026,TP2  IAyML,142,71,71,20783
+2026-06-09,21,Tuesday,2026-06,2026,Combinar múltiples PDFs en uno solo,4,2,2,188
+2026-06-09,23,Tuesday,2026-06,2026,Redes neuronales vs árboles de decisión,2,1,1,91
+2026-06-10,0,Wednesday,2026-06,2026,Cálculo de aguinaldo con conceptos no habituales,4,2,2,290
+2026-06-10,1,Wednesday,2026-06,2026,Cálculo del tiempo de recuperación de inversión,6,3,3,321
+2026-06-10,13,Wednesday,2026-06,2026,"situate en leyes argentinas, s...",6,3,3,2122
+2026-06-11,15,Thursday,2026-06,2026,Honorarios y sellos en renovación de alquiler,2,1,1,503
+2026-06-11,17,Thursday,2026-06,2026,CV para Analista BI en Banco Ciudad,12,6,6,4188
+2026-06-16,14,Tuesday,2026-06,2026,Cálculo para alcanzar 0.1 BTC,2,1,1,85
+2026-06-16,14,Tuesday,2026-06,2026,Distribución de inversión en MSFT y NU,4,2,2,253
+2026-06-16,17,Tuesday,2026-06,2026,A/B testing y modelos de machine learning,4,2,2,137
+2026-06-16,20,Tuesday,2026-06,2026,Certificación en ciencia de datos para industria oil & gas,4,2,2,310
+2026-06-16,21,Tuesday,2026-06,2026,Venta de herencia sin consentimiento de coherederos,2,1,1,443
+2026-06-16,21,Tuesday,2026-06,2026,Data science roles in agricultural cooperatives,2,1,1,272
+2026-06-16,22,Tuesday,2026-06,2026,Estrategia de inversión para cartera moderada-arriesgada,4,2,2,315
+2026-06-17,22,Wednesday,2026-06,2026,Ayuda con TP3,42,21,21,4862
+2026-06-18,12,Thursday,2026-06,2026,Predicciones de la segunda fecha del Mundial 2026,4,2,2,2766
+2026-06-18,19,Thursday,2026-06,2026,Renovación de contrato y protección legal ante demora,104,52,52,23542
+2026-06-20,18,Saturday,2026-06,2026,Segmentación de clientes con Python y visualización,34,17,17,8096
+2026-06-20,19,Saturday,2026-06,2026,Estrategia de promediación en MELI,2,1,1,127
+2026-06-21,19,Sunday,2026-06,2026,ISLP,370,185,185,48521
+2026-06-22,16,Monday,2026-06,2026,Cálculo de meses entre fechas,2,1,1,58
+2026-06-23,21,Tuesday,2026-06,2026,Alcance decreciente en publicaciones de data science,4,2,2,460
+2026-06-23,23,Tuesday,2026-06,2026,Distribución de $3000 en cartera de inversión,8,4,4,395
+2026-06-24,14,Wednesday,2026-06,2026,Análisis realista de mi cartera de inversiones,20,10,10,2264
+2026-06-24,18,Wednesday,2026-06,2026,Análisis técnico de BTC bajo 60k para entrada,2,1,1,326
+2026-06-24,20,Wednesday,2026-06,2026,Verificar anonimato de encuesta y evaluar comentario crítico,4,2,2,1231
+2026-06-24,22,Wednesday,2026-06,2026,Llamadas de números desconocidos,10,5,5,508
+2026-08-14,1,Friday,2026-08,2026,Datos personales para visualizar sin exponer privacidad,12,6,6,2312
+2026-08-13,19,Thursday,2026-08,2026,Deuda de servicios en terreno sin usar,4,2,2,669
+2026-08-11,22,Tuesday,2026-08,2026,Preguntas de NoSQL en Neo4j,42,21,21,5028
+2026-08-09,18,Sunday,2026-08,2026,Cargar base de datos Neo4j desde dump,8,4,4,223
+2026-08-02,0,Sunday,2026-08,2026,GIMNASIO,38,19,19,10966
+2026-08-01,13,Saturday,2026-08,2026,Google Sheets vista reducida atascada en fila 10,2,1,1,301
+2026-07-31,17,Friday,2026-07,2026,INVERSIONES PAPI,20,10,10,1747
+2026-07-30,23,Thursday,2026-07,2026,Invertir en agricultura o mercado de valores,14,7,7,4589
+2026-07-30,23,Thursday,2026-07,2026,Consulta sobre equivalencias y inicio de Tecnicatura en Ciencias de Datos,24,12,12,14112
+2026-07-29,0,Wednesday,2026-07,2026,CONVERSOR LATEX,4,2,2,4437
+2026-07-27,15,Monday,2026-07,2026,Timing de botox para viaje a Punta Cana,8,4,4,1056
+2026-07-27,12,Monday,2026-07,2026,Verificar si es estafa de correo,2,1,1,575
+2026-07-25,0,Saturday,2026-07,2026,,4,2,2,0
+2026-07-24,23,Friday,2026-07,2026,Replicar formato y fórmulas entre hojas de cálculo,12,6,6,2311
+2026-07-24,23,Friday,2026-07,2026,Acceder a Google Drive desde Claude,12,6,6,2174
+2026-07-24,15,Friday,2026-07,2026,,12,6,6,0
+2026-07-18,20,Saturday,2026-07,2026,Activación de tríceps en dominadas,2,1,1,116
+2026-07-18,14,Saturday,2026-07,2026,Crear podcast sobre concentración con NotebookLM,2,1,1,205
+2026-07-17,16,Friday,2026-07,2026,Renovación de licencia de conducir online,4,2,2,502
+2026-07-17,13,Friday,2026-07,2026,Relación problemática de mi papá con el dinero,2,1,1,1116
+2026-07-16,18,Thursday,2026-07,2026,Recuperar clave fiscal de ARCA sin trámite presencial,12,6,6,637
+2026-07-16,16,Thursday,2026-07,2026,Elegir hotel intermedio en Punta Cana para familia diversa,116,58,58,15838
+2026-07-13,23,Monday,2026-07,2026,Entrevistas técnicas de SQL en Banco Macro,30,15,15,7616
+2026-07-08,0,Wednesday,2026-07,2026,Cálculo de horas extras en feriado con aumento de sueldo,16,8,8,3815
+2026-07-07,21,Tuesday,2026-07,2026,Preparar test SQL para Data Analyst en Banco Macro,22,11,11,3707
+2026-07-07,21,Tuesday,2026-07,2026,Competencia de inversión en BYMALAB,6,3,3,1341
+2026-07-07,20,Tuesday,2026-07,2026,Dashboard web con prompt detallado,2,1,1,130
+2026-07-05,20,Sunday,2026-07,2026,LIBROS,8,4,4,1904
+2026-07-05,18,Sunday,2026-07,2026,Comparación de precios: viaje a Florianópolis armado por cuenta propia,4,2,2,562
+2026-07-05,14,Sunday,2026-07,2026,Meta de inversión: alcanzar 20k a fin de año,8,4,4,1463
+2026-07-04,19,Saturday,2026-07,2026,Ajustar rendimiento TWR por reinversiones no registradas,10,5,5,1601
+2026-07-04,18,Saturday,2026-07,2026,Convertir notebook a PDF,12,6,6,3746
+2026-07-03,20,Friday,2026-07,2026,Negociación salarial para puesto de data analyst en Banco Macro,411,205,206,73512
+2026-07-03,15,Friday,2026-07,2026,Armar CV para analista de operaciones comerciales,10,5,5,1943
+2026-07-03,15,Friday,2026-07,2026,Repostulación a Campo a Campo después del rechazo,16,8,8,4606
+2026-07-03,14,Friday,2026-07,2026,Vencimiento de factura ITBA con fechas diferentes,2,1,1,386
+2026-07-03,0,Friday,2026-07,2026,Negociación de aumento salarial por performance,4,2,2,629
+2026-07-02,20,Thursday,2026-07,2026,Ansiedad por inversiones y obsesión financiera,2,1,1,440
+2026-07-02,19,Thursday,2026-07,2026,Evaluating PwC job opportunity in resource management,4,2,2,1092
+2026-07-02,16,Thursday,2026-07,2026,MIS INVERSIONES,52,26,26,6702
+2026-07-02,1,Thursday,2026-07,2026,Discrepancia en pago del PRV Senior,30,15,15,8951
+2026-07-02,1,Thursday,2026-07,2026,Contactar exempleado de PWC para oportunidad laboral,6,3,3,515
+2026-07-02,0,Thursday,2026-07,2026,Tarea sencilla en la app,2,1,1,66
+2026-06-30,23,Tuesday,2026-06,2026,CV para gestor de disrupción en IA en YPF,6,3,3,3549
+2026-06-30,23,Tuesday,2026-06,2026,Balance presentation on June 30,12,6,6,646
+2026-06-30,22,Tuesday,2026-06,2026,Aplicaciones de ciencia de datos en industrias,2,1,1,258
+2026-06-30,19,Tuesday,2026-06,2026,Analista de Market Watch en BYMA: ¿es el puesto indicado?,4,2,2,2053
+2026-06-29,15,Monday,2026-06,2026,"Reinversión de cartera con acciones de Pepsi, Microsoft y Mercado Libre",20,10,10,1656
+2026-06-29,15,Monday,2026-06,2026,Utilidad del repositorio ponytail,24,12,12,1148
+2026-06-28,20,Sunday,2026-06,2026,Estrategia de tarjeta de crédito para maximizar inversiones,4,2,2,2048
+2026-06-27,14,Saturday,2026-06,2026,Acciones defensivas con dividendos para cartera,8,4,4,696
+2026-06-27,14,Saturday,2026-06,2026,Distribución de inversión en criptomonedas y acciones,2,1,1,350
+2026-06-26,23,Friday,2026-06,2026,Empresa verde de 3 letras en Argentina,2,1,1,133
+2026-06-26,22,Friday,2026-06,2026,CV para Analista Senior de Data Insights en Mercado Libre,42,21,21,16400
+2026-06-26,21,Friday,2026-06,2026,Comparación de salarios PwC Argentina vs PwC AC,2,1,1,40
+2026-06-26,21,Friday,2026-06,2026,Análisis realista de España-Uruguay y Cabo Verde-Arabia,2,1,1,83
+2026-06-26,20,Friday,2026-06,2026,Matriculación como asesor financiero independiente,12,6,6,2887
+2026-06-25,22,Thursday,2026-06,2026,Situación del empleo en Argentina,4,2,2,449
+2026-06-25,19,Thursday,2026-06,2026,MSFT caída y dudas sobre mantener a largo plazo,2,1,1,353
+2026-06-25,19,Thursday,2026-06,2026,Juegos de estrategia medieval alternativos,4,2,2,351
+2026-06-25,1,Thursday,2026-06,2026,Escena de Mike con su abuela en Suits,2,1,1,302

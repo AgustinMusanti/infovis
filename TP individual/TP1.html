@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi uso de IA — Agustín Musanti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Tokens ── */
+    :root {
+      --bg:        #FAF8F5;
+      --surface:   #F2EDE6;
+      --accent:    #DA7756;
+      --accent-dk: #B85C35;
+      --text:      #2A1F17;
+      --muted:     #7A6558;
+      --rule:      #E0D5CB;
+      --serif:     'DM Serif Display', Georgia, serif;
+      --sans:      'DM Sans', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 2rem 4rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 em {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .hero-body {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 540px;
+      margin-bottom: 3rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-stat strong {
+      font-family: var(--serif);
+      font-size: 2rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .hero-stat span {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .scroll-hint {
+      margin-top: 4rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .scroll-hint::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      background: var(--accent);
+      opacity: 0.5;
+    }
+
+    /* ── Sections ── */
+    .section {
+      padding: 5rem 2rem;
+      max-width: 860px;
+      margin: 0 auto;
+      border-top: 1px solid var(--rule);
+    }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-num {
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      color: var(--rule);
+      line-height: 1;
+      user-select: none;
+    }
+
+    .section-titles h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-titles p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    /* ── Chart wrapper ── */
+    .chart-wrap {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 2rem;
+      border: 1px solid var(--rule);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 4rem 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .section-header { grid-template-columns: 1fr; }
+      .section-num { font-size: 2rem; }
+      .chart-wrap { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <p class="hero-eyebrow">Visualización de datos personales · 2026</p>
+    <h1>¿Cómo integré<br/>la <em>IA</em> a mi rutina?</h1>
+    <p class="hero-body">
+      A principios de 2026 empecé a usar Claude como apoyo para el trabajo, los estudios y proyectos personales. Con el tiempo me pregunté cómo había evolucionado ese uso. Sin revisar el contenido de las conversaciones, miré los metadatos: cuándo, con qué frecuencia y cuánto. Esto es lo que encontré.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-stat">
+        <strong>261</strong>
+        <span>conversaciones</span>
+      </div>
+      <div class="hero-stat">
+        <strong>3.529</strong>
+        <span>mensajes</span>
+      </div>
+      <div class="hero-stat">
+        <strong>8</strong>
+        <span>meses</span>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- GRÁFICO 1 — Datawrapper -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <div class="section-titles">
+        <h2>¿Menos uso o mayor eficiencia?</h2>
+        <p>El pico de junio no significa que usé más la IA después — significa que empecé a concentrar el trabajo en conversaciones más largas en lugar de abrir una nueva cada vez.</p>
+      </div>
+    </div>
+    <div class="chart-wrap">
+      <!-- PEGAR ACÁ EL EMBED DE DATAWRAPPER -->
+      <div style="min-height:497px" id="datawrapper-vis-W6Tkg">
+        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/W6Tkg/embed.js" charset="utf-8" data-target="#datawrapper-vis-W6Tkg"></script>
+        <noscript><img src="https://datawrapper.dwcdn.net/W6Tkg/full.png" alt="¿Menos uso o mayor eficiencia?" /></noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRÁFICO 2 — placeholder -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <div class="section-titles">
+        <h2>Título del segundo gráfico</h2>
+        <p>Descripción narrativa del segundo gráfico.</p>
+      </div>
+    </div>
+    <div class="chart-wrap">
+      <!-- PEGAR ACÁ EL EMBED DEL SEGUNDO GRÁFICO -->
+      <p style="color: var(--muted); font-size: 0.9rem;">Gráfico próximamente</p>
+    </div>
+  </section>
+
+  <!-- GRÁFICO 3 — placeholder -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <div class="section-titles">
+        <h2>Título del tercer gráfico</h2>
+        <p>Descripción narrativa del tercer gráfico.</p>
+      </div>
+    </div>
+    <div class="chart-wrap">
+      <p style="color: var(--muted); font-size: 0.9rem;">Gráfico próximamente</p>
+    </div>
+  </section>
+
+  <!-- GRÁFICO 4 — placeholder -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <div class="section-titles">
+        <h2>Título del cuarto gráfico</h2>
+        <p>Descripción narrativa del cuarto gráfico.</p>
+      </div>
+    </div>
+    <div class="chart-wrap">
+      <p style="color: var(--muted); font-size: 0.9rem;">Gráfico próximamente</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Agustín Musanti · ITBA Data Science 2026</p>
+    <p style="margin-top: 0.4rem;">Datos extraídos de <a href="https://claude.ai" target="_blank">claude.ai</a></p>
+  </footer>
+
+</body>
+</html>

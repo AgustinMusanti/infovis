@@ -1,0 +1,13 @@
+Paleta del proyecto
+
+Uso	Color	Hex
+Color principal (barras, elementos destacados)	Naranja Claude	
+#DA7756
+Color secundario (acentos, líneas)	Beige/crema	
+#F0E6D3
+Fondo de gráficos	Casi blanco cálido	
+#FAF8F5
+Texto y ejes	Marrón oscuro	
+#3D2B1F
+Color de apoyo (anotaciones)	Naranja más oscuro	
+#B85C35

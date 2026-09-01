@@ -7,264 +7,101 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
   <style>
-    /* ── Tokens ── */
     :root {
-      --bg:        #FAF8F5;
-      --surface:   #F2EDE6;
-      --accent:    #DA7756;
-      --accent-dk: #B85C35;
-      --text:      #2A1F17;
-      --muted:     #7A6558;
-      --rule:      #E0D5CB;
-      --serif:     'DM Serif Display', Georgia, serif;
-      --sans:      'DM Sans', system-ui, sans-serif;
+      --bg:#FAF8F5;--surface:#F2EDE6;--accent:#DA7756;--accent-dk:#B85C35;
+      --text:#2A1F17;--muted:#7A6558;--rule:#E0D5CB;
+      --serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
     }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      font-weight: 300;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── Hero ── */
-    .hero {
-      min-height: 100svh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 6rem 2rem 4rem;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--sans);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.4rem, 6vw, 4rem);
-      line-height: 1.1;
-      color: var(--text);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 em {
-      color: var(--accent);
-      font-style: italic;
-    }
-
-    .hero-body {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 540px;
-      margin-bottom: 3rem;
-    }
-
-    .hero-meta {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .hero-stat {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .hero-stat strong {
-      font-family: var(--serif);
-      font-size: 2rem;
-      color: var(--accent);
-      line-height: 1;
-    }
-
-    .hero-stat span {
-      font-size: 0.78rem;
-      color: var(--muted);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .scroll-hint {
-      margin-top: 4rem;
-      font-size: 0.78rem;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .scroll-hint::after {
-      content: '';
-      display: block;
-      width: 1px;
-      height: 40px;
-      background: var(--accent);
-      opacity: 0.5;
-    }
-
-    /* ── Sections ── */
-    .section {
-      padding: 5rem 2rem;
-      max-width: 860px;
-      margin: 0 auto;
-      border-top: 1px solid var(--rule);
-    }
-
-    .section-header {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 1.5rem;
-      align-items: start;
-      margin-bottom: 2.5rem;
-    }
-
-    .section-num {
-      font-family: var(--serif);
-      font-size: 3.5rem;
-      color: var(--rule);
-      line-height: 1;
-      user-select: none;
-    }
-
-    .section-titles h2 {
-      font-family: var(--serif);
-      font-size: clamp(1.4rem, 3vw, 1.9rem);
-      line-height: 1.2;
-      margin-bottom: 0.6rem;
-    }
-
-    .section-titles p {
-      font-size: 0.92rem;
-      color: var(--muted);
-      max-width: 520px;
-    }
-
-    /* ── Chart wrapper ── */
-    .chart-wrap {
-      background: var(--surface);
-      border-radius: 12px;
-      padding: 2rem;
-      border: 1px solid var(--rule);
-    }
-
-    /* ── Footer ── */
-    footer {
-      text-align: center;
-      padding: 4rem 2rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-      border-top: 1px solid var(--rule);
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 600px) {
-      .section-header { grid-template-columns: 1fr; }
-      .section-num { font-size: 2rem; }
-      .chart-wrap { padding: 1rem; }
-    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
+    .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:6rem 2rem 4rem;max-width:720px;margin:0 auto}
+    .hero-eyebrow{font-family:var(--sans);font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem}
+    .hero h1{font-family:var(--serif);font-size:clamp(2.4rem,6vw,4rem);line-height:1.1;color:var(--text);margin-bottom:1.5rem}
+    .hero h1 em{color:var(--accent);font-style:italic}
+    .hero-body{font-size:1.05rem;color:var(--muted);max-width:540px;margin-bottom:3rem}
+    .hero-meta{display:flex;gap:2rem;flex-wrap:wrap}
+    .hero-stat{display:flex;flex-direction:column}
+    .hero-stat strong{font-family:var(--serif);font-size:2rem;color:var(--accent);line-height:1}
+    .hero-stat span{font-size:.78rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+    .section{padding:5rem 2rem;max-width:860px;margin:0 auto;border-top:1px solid var(--rule)}
+    .section-header{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start;margin-bottom:2.5rem}
+    .section-num{font-family:var(--serif);font-size:3.5rem;color:var(--rule);line-height:1;user-select:none}
+    .section-titles h2{font-family:var(--serif);font-size:clamp(1.4rem,3vw,1.9rem);line-height:1.2;margin-bottom:.6rem}
+    .section-titles p{font-size:.92rem;color:var(--muted);max-width:520px}
+    .chart-wrap{background:var(--surface);border-radius:12px;padding:2rem;border:1px solid var(--rule)}
+    footer{text-align:center;padding:4rem 2rem;font-size:.8rem;color:var(--muted);border-top:1px solid var(--rule)}
+    footer a{color:var(--accent);text-decoration:none}
+    @media(max-width:600px){.section-header{grid-template-columns:1fr}.section-num{font-size:2rem}.chart-wrap{padding:1rem}}
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
   <header class="hero">
     <p class="hero-eyebrow">Visualización de datos personales · 2026</p>
     <h1>¿Cómo integré<br/>la <em>IA</em> a mi rutina?</h1>
     <p class="hero-body">
-      A principios de 2026 empecé a usar Claude como apoyo para el trabajo, los estudios y proyectos personales. Con el tiempo me pregunté cómo había evolucionado ese uso, así que me puse a analizar los metadatos de mis conversaciones. Esto es lo que encontré:
+      A principios de 2026 empecé a usar Claude como apoyo para el trabajo, los estudios y proyectos personales. Con el tiempo me pregunté cómo había evolucionado ese uso. Sin revisar el contenido de las conversaciones, miré los metadatos: cuándo, con qué frecuencia y cuánto. Esto es lo que encontré.
     </p>
     <div class="hero-meta">
-      <div class="hero-stat">
-        <strong>261</strong>
-        <span>conversaciones</span>
-      </div>
-      <div class="hero-stat">
-        <strong>3.529</strong>
-        <span>mensajes</span>
-      </div>
-      <div class="hero-stat">
-        <strong>8</strong>
-        <span>meses</span>
-      </div>
+      <div class="hero-stat"><strong>261</strong><span>conversaciones</span></div>
+      <div class="hero-stat"><strong>3.529</strong><span>mensajes</span></div>
+      <div class="hero-stat"><strong>8</strong><span>meses</span></div>
     </div>
-
   </header>
 
-  <!-- GRÁFICO 1 — Datawrapper -->
+  <!-- 01 — Flourish: días de la semana -->
   <section class="section">
     <div class="section-header">
       <span class="section-num">01</span>
       <div class="section-titles">
+        <h2>¿Qué días recurro más a Claude?</h2>
+        <p>La actividad se concentra de martes a jueves, alcanzando su pico el jueves con 370 consultas. Los fines de semana la interacción cae drásticamente, reflejando una clara pausa en la rutina laboral.</p>
+      </div>
+    </div>
+    <div class="chart-wrap">
+      <div class="flourish-embed flourish-chart" data-src="visualisation/30098890"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30098890/thumbnail" width="100%" alt="Consultas por día de semana" /></noscript></div>
+    </div>
+  </section>
+
+  <!-- 02 — Datawrapper: conversaciones por mes -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <div class="section-titles">
         <h2>¿Menos uso o mayor eficiencia?</h2>
-        <p>Tras llegar a un máximo de conversaciones abiertas en junio, los últimos meses muestran un descenso marcado en la creación de nuevos hilos. Esto plantea un dilema: ¿estoy usando menos la IA o aprendí a concentrar mi trabajo en chats ya existentes?.</p>
+        <p>Tras llegar a un máximo de conversaciones abiertas en junio, los últimos meses muestran un descenso marcado en la creación de nuevos hilos. Esto plantea un dilema: ¿estoy usando menos la IA o aprendí a concentrar mi trabajo en chats ya existentes?</p>
       </div>
     </div>
     <div class="chart-wrap">
       <div style="min-height:497px" id="datawrapper-vis-W6Tkg">
         <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/W6Tkg/embed.js" charset="utf-8" data-target="#datawrapper-vis-W6Tkg"></script>
-        <noscript><img src="https://datawrapper.dwcdn.net/W6Tkg/full.png" alt="¿Menos uso o mayor eficiencia?" /></noscript>
+        <noscript><img src="https://datawrapper.dwcdn.net/W6Tkg/full.png" alt="Registro de conversaciones iniciadas por mes" /></noscript>
       </div>
     </div>
   </section>
 
-  <!-- GRÁFICO 2 — placeholder -->
-  <section class="section">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <div class="section-titles">
-        <h2>¿Qué días recurro más a Claude?</h2>
-        <p>La actividad se concentra de martes a jueves, alcanzando su pico el jueves con 370 consultas. Los fines de semana la interacción cae drásticamente, reflejando una clara pausa en la rutina laboral</p>
-      </div>
-    </div>
-    <div class="chart-wrap">
-      <div class="flourish-embed flourish-chart" data-src="visualisation/30098890"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30098890/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-    </div>
-  </section>
-
-  <!-- GRÁFICO 3 — placeholder -->
+  <!-- 03 — RAWGraphs: streamgraph -->
   <section class="section">
     <div class="section-header">
       <span class="section-num">03</span>
       <div class="section-titles">
         <h2>¿Realmente me volví más eficiente?</h2>
-        <p>La respuesta corta es no. Mi hipótesis era que abría menos hilos porque estaba teniendo conversaciones más largas y profundas en chats ya existentes. Sin embargo, al clasificar los chats por su volumen de mensajes, el gráfico desmiente mi teoría: en julio y agosto cayeron todas las categorías por igual. No hubo tal optimización, simplemente hubo una desconexión real..</p>
+        <p>La respuesta corta es no. Mi hipótesis era que abría menos hilos porque estaba teniendo conversaciones más largas y profundas en chats ya existentes. Sin embargo, al clasificar los chats por su volumen de mensajes, el gráfico desmiente mi teoría: en julio y agosto cayeron todas las categorías por igual. No hubo tal optimización, simplemente hubo una desconexión real.</p>
       </div>
     </div>
-   <div class="chart-wrap">
-  <img src="streamgraph.svg" alt="Streamgraph de tipos de conversación" style="width:100%; height:auto;" />
-</div>
+    <div class="chart-wrap">
+      <img src="streamgraph.svg" alt="Streamgraph de tipos de conversación" style="width:100%; height:auto;" />
+    </div>
   </section>
 
-  <!-- GRÁFICO 4 — placeholder -->
+  <!-- 04 — Tableau/PowerBI -->
   <section class="section">
     <div class="section-header">
       <span class="section-num">04</span>
       <div class="section-titles">
-        <h2>Título del cuarto gráfico</h2>
+        <h2>¿A qué hora pienso con IA?</h2>
         <p>Descripción.</p>
       </div>
     </div>
@@ -273,7 +110,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>Agustín Musanti · ITBA Data Science 2026</p>
     <p style="margin-top: 0.4rem;">Datos extraídos de <a href="https://claude.ai" target="_blank">claude.ai</a></p>

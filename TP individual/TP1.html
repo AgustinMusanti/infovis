@@ -13,7 +13,6 @@
       --surface: #F2EDE6;
       --accent: #DA7756;
       --accent-dk: #B85C35;
-      --accent-light: #F2D0B8;
       --text: #2A1F17;
       --muted: #7A6558;
       --rule: #E0D5CB;
@@ -34,82 +33,6 @@
       overflow-x: hidden;
     }
 
-    /* ── Claude floating mascot ── */
-    .claude-mascot {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 48px;
-      height: 48px;
-      background: var(--accent);
-      border-radius: 12px 12px 12px 4px;
-      z-index: 100;
-      animation: float 3s ease-in-out infinite;
-      cursor: default;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 20px rgba(218, 119, 86, 0.3);
-      transition: transform 0.3s ease;
-    }
-
-    .claude-mascot:hover {
-      transform: scale(1.1) rotate(-5deg);
-    }
-
-    .claude-mascot::before {
-      content: '';
-      width: 8px;
-      height: 8px;
-      background: white;
-      border-radius: 50%;
-      position: absolute;
-      top: 14px;
-      left: 14px;
-    }
-
-    .claude-mascot::after {
-      content: '';
-      width: 8px;
-      height: 8px;
-      background: white;
-      border-radius: 50%;
-      position: absolute;
-      top: 14px;
-      right: 14px;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    /* ── Decorative blobs ── */
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.15;
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    .blob-1 {
-      width: 400px;
-      height: 400px;
-      background: var(--accent);
-      top: -100px;
-      right: -100px;
-    }
-
-    .blob-2 {
-      width: 300px;
-      height: 300px;
-      background: var(--accent-dk);
-      bottom: 10%;
-      left: -80px;
-    }
-
     /* ── Hero ── */
     .hero {
       min-height: 100svh;
@@ -119,7 +42,6 @@
       padding: 6rem 2rem 4rem;
       max-width: 760px;
       margin: 0 auto;
-      position: relative;
     }
 
     .hero-eyebrow {
@@ -202,39 +124,11 @@
       margin-top: 0.3rem;
     }
 
-    .scroll-cue {
-      margin-top: 5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-
-    .scroll-cue span {
-      font-size: 0.72rem;
-      color: var(--muted);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .scroll-cue .line {
-      width: 1px;
-      height: 48px;
-      background: linear-gradient(to bottom, var(--accent), transparent);
-      animation: pulse-line 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse-line {
-      0%, 100% { opacity: 1; height: 48px; }
-      50% { opacity: 0.4; height: 32px; }
-    }
-
     /* ── Sections ── */
     .section {
       padding: 6rem 2rem;
       max-width: 900px;
       margin: 0 auto;
-      position: relative;
     }
 
     .section + .section {
@@ -285,11 +179,6 @@
       padding: 2rem;
       border: 1px solid var(--rule);
       box-shadow: 0 2px 12px rgba(42, 31, 23, 0.04);
-      transition: box-shadow 0.3s ease;
-    }
-
-    .chart-wrap:hover {
-      box-shadow: 0 4px 24px rgba(42, 31, 23, 0.08);
     }
 
     /* ── Divider ── */
@@ -367,6 +256,7 @@
       align-items: center;
       gap: 0.5rem;
       margin-top: 0.5rem;
+      flex-wrap: wrap;
     }
 
     .footer-row .dot {
@@ -376,11 +266,11 @@
       border-radius: 50%;
     }
 
-    /* ── Fade-in animation ── */
+    /* ── Fade-in on scroll ── */
     .fade-in {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
     .fade-in.visible {
@@ -394,17 +284,10 @@
       .section { padding: 4rem 1.5rem; }
       .chart-wrap { padding: 1rem; border-radius: 12px; }
       .hero-meta { gap: 2rem; }
-      .claude-mascot { width: 40px; height: 40px; bottom: 16px; right: 16px; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Claude mascot -->
-  <div class="claude-mascot" title="Claude"></div>
-
-  <!-- Decorative blobs -->
-  <div class="blob blob-1"></div>
 
   <!-- HERO -->
   <header class="hero">
@@ -418,13 +301,9 @@
       <div class="hero-stat"><strong>3.529</strong><span>mensajes</span></div>
       <div class="hero-stat"><strong>8</strong><span>meses</span></div>
     </div>
-    <div class="scroll-cue">
-      <span>explorar</span>
-      <div class="line"></div>
-    </div>
   </header>
 
-  <!-- GRÁFICO 1 — Flourish -->
+  <!-- 1 — Flourish: días de la semana -->
   <section class="section fade-in">
     <p class="section-label">Patrón semanal</p>
     <h2>¿Qué días recurro más a Claude?</h2>
@@ -436,34 +315,7 @@
     </div>
   </section>
 
-  <!-- GRÁFICO 2 — Datawrapper -->
-  <section class="section fade-in">
-    <p class="section-label">Evolución mensual</p>
-    <h2>¿Menos uso o mayor eficiencia?</h2>
-    <p class="section-desc">
-      Tras llegar a un máximo de conversaciones abiertas en junio, los últimos meses muestran un descenso marcado en la creación de nuevos hilos. Esto plantea un dilema: ¿estoy usando menos la IA o aprendí a concentrar mi trabajo en chats ya existentes?
-    </p>
-    <div class="chart-wrap">
-      <div style="min-height:497px" id="datawrapper-vis-W6Tkg">
-        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/W6Tkg/embed.js" charset="utf-8" data-target="#datawrapper-vis-W6Tkg"></script>
-        <noscript><img src="https://datawrapper.dwcdn.net/W6Tkg/full.png" alt="Registro de conversaciones iniciadas por mes" /></noscript>
-      </div>
-    </div>
-  </section>
-
-  <!-- GRÁFICO 3 — RAWGraphs -->
-  <section class="section fade-in">
-    <p class="section-label">Análisis de profundidad</p>
-    <h2>¿Realmente usé menos IA... o cambié la forma de usarla?</h2>
-    <p class="section-desc">
-      Para entender esa caída, decidí separar mis consultas entre conversaciones nuevas e hilos ya existentes. El gráfico muestra cómo el uso de conversaciones anteriores fue ganando peso progresivamente hasta dominar por completo en los últimos meses. No me desconecté de la herramienta, simplemente cambié la forma de usarla.
-    </p>
-    <div class="chart-wrap">
-      <object type="image/svg+xml" data="streamgraph.svg" style="width:100%; height:auto;">Streamgraph de tipos de conversación</object>
-    </div>
-  </section>
-
-  <!-- GRÁFICO 4 — Tableau -->
+  <!-- 2 — Tableau: heatmap horario -->
   <section class="section fade-in">
     <p class="section-label">Distribución horaria</p>
     <h2>¿Tengo un horario para usar la IA?</h2>
@@ -494,11 +346,38 @@
         var divElement = document.getElementById('viz1788402874029');
         var vizElement = divElement.getElementsByTagName('object')[0];
         vizElement.style.width='100%';
-        vizElement.style.height=(divElement.offsetWidth*0.5)+'px';
+        vizElement.style.height=(divElement.offsetWidth*0.45)+'px';
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
       </script>
+    </div>
+  </section>
+
+  <!-- 3 — Datawrapper: conversaciones por mes -->
+  <section class="section fade-in">
+    <p class="section-label">Evolución mensual</p>
+    <h2>¿Menos uso o mayor eficiencia?</h2>
+    <p class="section-desc">
+      Tras llegar a un máximo de conversaciones abiertas en junio, los últimos meses muestran un descenso marcado en la creación de nuevos hilos. Esto plantea un dilema: ¿estoy usando menos la IA o aprendí a concentrar mi trabajo en chats ya existentes?
+    </p>
+    <div class="chart-wrap">
+      <div style="min-height:497px" id="datawrapper-vis-W6Tkg">
+        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/W6Tkg/embed.js" charset="utf-8" data-target="#datawrapper-vis-W6Tkg"></script>
+        <noscript><img src="https://datawrapper.dwcdn.net/W6Tkg/full.png" alt="Registro de conversaciones iniciadas por mes" /></noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 — RAWGraphs: streamgraph -->
+  <section class="section fade-in">
+    <p class="section-label">Análisis de profundidad</p>
+    <h2>¿Realmente usé menos IA... o cambié la forma de usarla?</h2>
+    <p class="section-desc">
+      Para entender esa caída, decidí separar mis consultas entre conversaciones nuevas e hilos ya existentes. El gráfico muestra cómo el uso de conversaciones anteriores fue ganando peso progresivamente hasta dominar por completo en los últimos meses. No me desconecté de la herramienta, simplemente cambié la forma de usarla.
+    </p>
+    <div class="chart-wrap">
+      <img src="streamgraph.svg" alt="Streamgraph de tipos de conversación" style="width:100%; height:auto; display:block;" />
     </div>
   </section>
 

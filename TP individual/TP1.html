@@ -6,38 +6,407 @@
   <title>Mi uso de IA — Agustín Musanti</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg:#FAF8F5;--surface:#F2EDE6;--accent:#DA7756;--accent-dk:#B85C35;
-      --text:#2A1F17;--muted:#7A6558;--rule:#E0D5CB;
-      --serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
+      --bg: #FAF8F5;
+      --surface: #F2EDE6;
+      --accent: #DA7756;
+      --accent-dk: #B85C35;
+      --accent-light: #F2D0B8;
+      --text: #2A1F17;
+      --muted: #7A6558;
+      --rule: #E0D5CB;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
     }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
-    .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:6rem 2rem 4rem;max-width:720px;margin:0 auto}
-    .hero-eyebrow{font-family:var(--sans);font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem}
-    .hero h1{font-family:var(--serif);font-size:clamp(2.4rem,6vw,4rem);line-height:1.1;color:var(--text);margin-bottom:1.5rem}
-    .hero h1 em{color:var(--accent);font-style:italic}
-    .hero-body{font-size:1.05rem;color:var(--muted);max-width:540px;margin-bottom:3rem}
-    .hero-meta{display:flex;gap:2rem;flex-wrap:wrap}
-    .hero-stat{display:flex;flex-direction:column}
-    .hero-stat strong{font-family:var(--serif);font-size:2rem;color:var(--accent);line-height:1}
-    .hero-stat span{font-size:.78rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
-    .section{padding:5rem 2rem;max-width:860px;margin:0 auto;border-top:1px solid var(--rule)}
-    .section-header{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start;margin-bottom:2.5rem}
-    .section-num{font-family:var(--serif);font-size:3.5rem;color:var(--rule);line-height:1;user-select:none}
-    .section-titles h2{font-family:var(--serif);font-size:clamp(1.4rem,3vw,1.9rem);line-height:1.2;margin-bottom:.6rem}
-    .section-titles p{font-size:.92rem;color:var(--muted);max-width:520px}
-    .chart-wrap{background:var(--surface);border-radius:12px;padding:2rem;border:1px solid var(--rule)}
-    footer{text-align:center;padding:4rem 2rem;font-size:.8rem;color:var(--muted);border-top:1px solid var(--rule)}
-    footer a{color:var(--accent);text-decoration:none}
-    @media(max-width:600px){.section-header{grid-template-columns:1fr}.section-num{font-size:2rem}.chart-wrap{padding:1rem}}
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── Claude floating mascot ── */
+    .claude-mascot {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      background: var(--accent);
+      border-radius: 12px 12px 12px 4px;
+      z-index: 100;
+      animation: float 3s ease-in-out infinite;
+      cursor: default;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(218, 119, 86, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .claude-mascot:hover {
+      transform: scale(1.1) rotate(-5deg);
+    }
+
+    .claude-mascot::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 14px;
+      left: 14px;
+    }
+
+    .claude-mascot::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 14px;
+      right: 14px;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* ── Decorative blobs ── */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .blob-1 {
+      width: 400px;
+      height: 400px;
+      background: var(--accent);
+      top: -100px;
+      right: -100px;
+    }
+
+    .blob-2 {
+      width: 300px;
+      height: 300px;
+      background: var(--accent-dk);
+      bottom: 10%;
+      left: -80px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 2rem 4rem;
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 32px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 7vw, 4.2rem);
+      line-height: 1.08;
+      color: var(--text);
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 em {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .hero-body {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 540px;
+      margin-bottom: 3.5rem;
+      line-height: 1.8;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .hero-stat::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .hero-stat strong {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .hero-stat span {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 0.3rem;
+    }
+
+    .scroll-cue {
+      margin-top: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .scroll-cue span {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .scroll-cue .line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+      animation: pulse-line 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-line {
+      0%, 100% { opacity: 1; height: 48px; }
+      50% { opacity: 0.4; height: 32px; }
+    }
+
+    /* ── Sections ── */
+    .section {
+      padding: 6rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .section + .section {
+      border-top: 1px solid var(--rule);
+    }
+
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 16px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .section h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 1rem;
+      max-width: 600px;
+    }
+
+    .section-desc {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+
+    /* ── Chart wrapper ── */
+    .chart-wrap {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid var(--rule);
+      box-shadow: 0 2px 12px rgba(42, 31, 23, 0.04);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .chart-wrap:hover {
+      box-shadow: 0 4px 24px rgba(42, 31, 23, 0.08);
+    }
+
+    /* ── Divider ── */
+    .divider {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .divider-line {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .divider-line::before,
+    .divider-line::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .divider-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    /* ── Conclusion ── */
+    .conclusion {
+      padding: 6rem 2rem;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .conclusion h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+
+    .conclusion p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .footer-row .dot {
+      width: 3px;
+      height: 3px;
+      background: var(--muted);
+      border-radius: 50%;
+    }
+
+    /* ── Fade-in animation ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero { padding: 4rem 1.5rem 3rem; }
+      .section { padding: 4rem 1.5rem; }
+      .chart-wrap { padding: 1rem; border-radius: 12px; }
+      .hero-meta { gap: 2rem; }
+      .claude-mascot { width: 40px; height: 40px; bottom: 16px; right: 16px; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Claude mascot -->
+  <div class="claude-mascot" title="Claude"></div>
+
+  <!-- Decorative blobs -->
+  <div class="blob blob-1"></div>
+
+  <!-- HERO -->
   <header class="hero">
     <p class="hero-eyebrow">Visualización de datos personales · 2026</p>
     <h1>¿Cómo integré<br/>la <em>IA</em> a mi rutina?</h1>
@@ -49,31 +418,31 @@
       <div class="hero-stat"><strong>3.529</strong><span>mensajes</span></div>
       <div class="hero-stat"><strong>8</strong><span>meses</span></div>
     </div>
+    <div class="scroll-cue">
+      <span>explorar</span>
+      <div class="line"></div>
+    </div>
   </header>
 
-  <!-- 01 — Flourish: días de la semana -->
-  <section class="section">
-    <div class="section-header">
-      <span class="section-num">01</span>
-      <div class="section-titles">
-        <h2>¿Qué días recurro más a Claude?</h2>
-        <p>La actividad se concentra de martes a jueves, alcanzando su pico el jueves con 370 consultas. Los fines de semana la interacción cae drásticamente, reflejando una clara pausa en la rutina laboral.</p>
-      </div>
-    </div>
+  <!-- GRÁFICO 1 — Flourish -->
+  <section class="section fade-in">
+    <p class="section-label">Patrón semanal</p>
+    <h2>¿Qué días recurro más a Claude?</h2>
+    <p class="section-desc">
+      La actividad se concentra de martes a jueves, alcanzando su pico el jueves con 370 consultas. Los fines de semana la interacción cae drásticamente, reflejando una clara pausa en la rutina laboral.
+    </p>
     <div class="chart-wrap">
       <div class="flourish-embed flourish-chart" data-src="visualisation/30098890"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30098890/thumbnail" width="100%" alt="Consultas por día de semana" /></noscript></div>
     </div>
   </section>
 
-  <!-- 02 — Datawrapper: conversaciones por mes -->
-  <section class="section">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <div class="section-titles">
-        <h2>¿Menos uso o mayor eficiencia?</h2>
-        <p>Tras llegar a un máximo de conversaciones abiertas en junio, los últimos meses muestran un descenso marcado en la creación de nuevos hilos. Esto plantea un dilema: ¿estoy usando menos la IA o aprendí a concentrar mi trabajo en chats ya existentes?</p>
-      </div>
-    </div>
+  <!-- GRÁFICO 2 — Datawrapper -->
+  <section class="section fade-in">
+    <p class="section-label">Evolución mensual</p>
+    <h2>¿Menos uso o mayor eficiencia?</h2>
+    <p class="section-desc">
+      Tras llegar a un máximo de conversaciones abiertas en junio, los últimos meses muestran un descenso marcado en la creación de nuevos hilos. Esto plantea un dilema: ¿estoy usando menos la IA o aprendí a concentrar mi trabajo en chats ya existentes?
+    </p>
     <div class="chart-wrap">
       <div style="min-height:497px" id="datawrapper-vis-W6Tkg">
         <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/W6Tkg/embed.js" charset="utf-8" data-target="#datawrapper-vis-W6Tkg"></script>
@@ -82,37 +451,94 @@
     </div>
   </section>
 
-  <!-- 03 — RAWGraphs: streamgraph -->
-  <section class="section">
-    <div class="section-header">
-      <span class="section-num">03</span>
-      <div class="section-titles">
-        <h2>¿Realmente usé menos IA... o cambié la forma de usarla?</h2>
-        <p>Para entender esa caída, decidí separar mis consultas entre conversaciones nuevas e hilos ya existentes. El gráfico a continuación muestra cómo el uso de conversaciones anteriores fue ganando peso progresivamente hasta dominar por completo en los últimos meses. En definitiva, los datos confirman que no hubo un abandono temporal, sino una transformación en mi dinámica de consumo.</p>
+  <!-- GRÁFICO 3 — RAWGraphs -->
+  <section class="section fade-in">
+    <p class="section-label">Análisis de profundidad</p>
+    <h2>¿Realmente usé menos IA... o cambié la forma de usarla?</h2>
+    <p class="section-desc">
+      Para entender esa caída, decidí separar mis consultas entre conversaciones nuevas e hilos ya existentes. El gráfico muestra cómo el uso de conversaciones anteriores fue ganando peso progresivamente hasta dominar por completo en los últimos meses. No me desconecté de la herramienta, simplemente cambié la forma de usarla.
+    </p>
+    <div class="chart-wrap">
+      <object type="image/svg+xml" data="streamgraph.svg" style="width:100%; height:auto;">Streamgraph de tipos de conversación</object>
+    </div>
+  </section>
+
+  <!-- GRÁFICO 4 — Tableau -->
+  <section class="section fade-in">
+    <p class="section-label">Distribución horaria</p>
+    <h2>¿Tengo un horario para usar la IA?</h2>
+    <p class="section-desc">
+      El mapa revela dos franjas de uso bien definidas: una entre la medianoche y las 2hs, y otra más intensa desde el mediodía hasta la medianoche. La mañana aparece casi en blanco. Lejos de un horario fijo, el uso de Claude se adapta a mi rutina — y mi rutina claramente no empieza temprano.
+    </p>
+    <div class="chart-wrap">
+      <div class='tableauPlaceholder' id='viz1788402874029' style='position: relative'>
+        <noscript><a href='#'><img alt='Heatmap de uso de Claude por hora y día' src='https://public.tableau.com/static/images/He/Heatmap-claude/Heatmap-claude/1_rss.png' style='border: none' /></a></noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='Heatmap-claude/Heatmap-claude' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='no' />
+          <param name='static_image' value='https://public.tableau.com/static/images/He/Heatmap-claude/Heatmap-claude/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='es-ES' />
+          <param name='filter' value='publish=yes' />
+        </object>
       </div>
-    </div>
-    <div class="chart-wrap">
-      <img src="streamgraph.svg" alt="Streamgraph de tipos de conversación" style="width:100%; height:auto;" />
-    </div>
-  </section>
-
-  <!-- 04 — Tableau/PowerBI -->
-  <section class="section">
-    <div class="section-header">
-      <span class="section-num">04</span>
-      <div class="section-titles">
-        <h2>¿Tengo un horario definido de uso?</h2>
-        <p>El siguiente gráfico revela dos franjas de uso bien definidas: una entre la medianoche y las 2hs, y otra más intensa desde el mediodía hasta la medianoche. La mañana aparece casi en blanco. Lejos de un horario fijo, el uso de Claude se adapta a mi rutina, y mi rutina claramente no empieza temprano..</p>
-      <div class='tableauPlaceholder' id='viz1788402874029' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;He&#47;Heatmap-claude&#47;Heatmap-claude&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Heatmap-claude&#47;Heatmap-claude' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;He&#47;Heatmap-claude&#47;Heatmap-claude&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1788402874029');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    <div class="chart-wrap">
-      <p style="color: var(--muted); font-size: 0.9rem;">Gráfico próximamente</p>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1788402874029');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width='100%';
+        vizElement.style.height=(divElement.offsetWidth*0.5)+'px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
     </div>
   </section>
 
+  <!-- Divider -->
+  <div class="divider">
+    <div class="divider-line">
+      <div class="divider-dot"></div>
+    </div>
+  </div>
+
+  <!-- Conclusion -->
+  <section class="conclusion fade-in">
+    <h2>La IA no reemplazó mi rutina,<br/>se adaptó a ella.</h2>
+    <p>
+      En ocho meses, pasé de explorar Claude con consultas sueltas a integrarlo como una herramienta más de mi día a día. Los datos muestran que no solo lo uso más, sino que lo uso distinto: con menos conversaciones nuevas, sesiones más profundas, y en horarios que reflejan mi propio ritmo de trabajo.
+    </p>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>Agustín Musanti · ITBA Data Science 2026</p>
-    <p style="margin-top: 0.4rem;">Datos extraídos de <a href="https://claude.ai" target="_blank">claude.ai</a></p>
+    <div class="footer-row">
+      <span>Datos extraídos de <a href="https://claude.ai" target="_blank">claude.ai</a></span>
+      <div class="dot"></div>
+      <span>Herramientas: Datawrapper · Flourish · RAWGraphs · Tableau</span>
+    </div>
   </footer>
+
+  <!-- Fade-in observer -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>

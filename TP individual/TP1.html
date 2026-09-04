@@ -85,43 +85,60 @@
       line-height: 1.8;
     }
 
-    .hero-meta {
-      display: flex;
-      gap: 3rem;
-      flex-wrap: wrap;
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      overflow: hidden;
     }
 
     .hero-stat {
       display: flex;
       flex-direction: column;
-      position: relative;
-      padding-left: 1rem;
-    }
-
-    .hero-stat::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 3px;
-      height: 100%;
-      background: var(--accent);
-      border-radius: 2px;
+      align-items: center;
+      justify-content: center;
+      padding: 1.8rem 1rem;
+      background: var(--surface);
+      text-align: center;
     }
 
     .hero-stat strong {
       font-family: var(--serif);
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       color: var(--accent);
       line-height: 1;
+      margin-bottom: 0.4rem;
     }
 
     .hero-stat span {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       color: var(--muted);
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-top: 0.3rem;
+      line-height: 1.3;
+    }
+
+    .hero-stat.highlight {
+      background: var(--accent);
+    }
+
+    .hero-stat.highlight strong {
+      color: #FFFFFF;
+    }
+
+    .hero-stat.highlight span {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .hero-period {
+      margin-top: 1.2rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-align: center;
     }
 
     /* ── Sections ── */
@@ -284,6 +301,7 @@
       .section { padding: 4rem 1.5rem; }
       .chart-wrap { padding: 1rem; border-radius: 12px; }
       .hero-meta { gap: 2rem; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -296,14 +314,16 @@
     <p class="hero-body">
       A principios de 2026 empecé a usar Claude como apoyo para el trabajo, los estudios y proyectos personales. Con el tiempo me pregunté cómo había evolucionado ese uso. Sin revisar el contenido de las conversaciones, miré los metadatos: cuándo, con qué frecuencia y cuánto. Esto es lo que encontré.
     </p>
-    <div class="hero-meta">
-      <div class="hero-stat"><strong>261</strong><span>conversaciones</span></div>
-      <div class="hero-stat"><strong>3.529</strong><span>mensajes</span></div>
-      <div class="hero-stat"><strong>8</strong><span>meses</span></div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>261</strong><span>Conversaciones</span></div>
+      <div class="hero-stat"><strong>3.529</strong><span>Mensajes</span></div>
+      <div class="hero-stat"><strong>1.786</strong><span>Consultas mías</span></div>
+      <div class="hero-stat highlight"><strong>75%</strong><span>Días con actividad</span></div>
+      <div class="hero-stat"><strong>11</strong><span>Consultas por día</span></div>
+      <div class="hero-stat"><strong>23hs</strong><span>Hora pico</span></div>
     </div>
-  </header>
-
-  <!-- 1 — Flourish: días de la semana -->
+    <p class="hero-period">Período analizado: enero — agosto 2026</p>
+  </header>: días de la semana -->
   <section class="section fade-in">
     <p class="section-label">Patrón semanal</p>
     <h2>¿Qué días recurro más a Claude?</h2>
@@ -320,7 +340,7 @@
     <p class="section-label">Distribución horaria</p>
     <h2>¿Tengo un horario para usar la IA?</h2>
     <p class="section-desc">
-      El mapa revela dos franjas de uso bien definidas: una entre la medianoche y las 2hs, y otra más intensa desde el mediodía hasta la medianoche. La mañana aparece casi en blanco. Lejos de un horario fijo, el uso de Claude se adapta a mi rutina, y mi rutina claramente no empieza temprano.
+      El mapa revela dos franjas de uso bien definidas: una entre la medianoche y las 2hs, y otra más intensa desde el mediodía hasta la medianoche. La mañana aparece casi en blanco. Lejos de un horario fijo, el uso de Claude se adapta a mi rutina — y mi rutina claramente no empieza temprano.
     </p>
     <div class="chart-wrap">
       <div class='tableauPlaceholder' id='viz1788402874029' style='position: relative'>
@@ -374,7 +394,7 @@
     <p class="section-label">Análisis de profundidad</p>
     <h2>¿Realmente usé menos IA... o cambié la forma de usarla?</h2>
     <p class="section-desc">
-      Para entender esa caída, decidí separar mis consultas entre conversaciones nuevas e hilos ya existentes. El gráfico muestra cómo el uso de conversaciones anteriores fue ganando peso progresivamente hasta dominar por completo en los últimos meses. Esto evidencia que cambié la forma de usar esta herramienta.
+      Para entender esa caída, decidí separar mis consultas entre conversaciones nuevas e hilos ya existentes. El gráfico muestra cómo el uso de conversaciones anteriores fue ganando peso progresivamente hasta dominar por completo en los últimos meses. No me desconecté de la herramienta, simplemente cambié la forma de usarla.
     </p>
     <div class="chart-wrap">
       <img src="streamgraph.svg" alt="Streamgraph de tipos de conversación" style="width:100%; height:auto; display:block;" />
@@ -392,7 +412,7 @@
   <section class="conclusion fade-in">
     <h2>La IA no reemplazó mi rutina,<br/>se adaptó a ella.</h2>
     <p>
-      En ocho meses, pasé de explorar Claude con consultas sueltas a integrarlo como una herramienta más de mi día a día. Los datos muestran cómo cambió mi dinámica de uso: menos conversaciones nuevas, sesiones más profundas, y en horarios que reflejan mi propio ritmo de trabajo.
+      En ocho meses, pasé de explorar Claude con consultas sueltas a integrarlo como una herramienta más de mi día a día. Los datos muestran que no solo lo uso más, sino que lo uso distinto: con menos conversaciones nuevas, sesiones más profundas, y en horarios que reflejan mi propio ritmo de trabajo.
     </p>
   </section>
 

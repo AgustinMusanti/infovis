@@ -39,6 +39,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      text-align: center;
       padding: 6rem 2rem 4rem;
       max-width: 760px;
       margin: 0 auto;
@@ -58,6 +60,13 @@
     }
 
     .hero-eyebrow::before {
+      content: '';
+      width: 32px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .hero-eyebrow::after {
       content: '';
       width: 32px;
       height: 2px;
@@ -162,10 +171,18 @@
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.5rem;
     }
 
     .section-label::before {
+      content: '';
+      width: 16px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .section-label::after {
       content: '';
       width: 16px;
       height: 2px;
@@ -179,6 +196,9 @@
       color: var(--text);
       margin-bottom: 1rem;
       max-width: 600px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .section-desc {
@@ -187,6 +207,9 @@
       max-width: 580px;
       margin-bottom: 2.5rem;
       line-height: 1.8;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* ── Chart wrapper ── */
@@ -317,13 +340,15 @@
     <div class="hero-stats">
       <div class="hero-stat"><strong>261</strong><span>Conversaciones</span></div>
       <div class="hero-stat"><strong>3.529</strong><span>Mensajes</span></div>
-      <div class="hero-stat"><strong>1.786</strong><span>Consultas mías</span></div>
+      <div class="hero-stat"><strong>13</strong><span>Promedio por chat</span></div>
       <div class="hero-stat highlight"><strong>75%</strong><span>Días con actividad</span></div>
-      <div class="hero-stat"><strong>11</strong><span>Consultas por día</span></div>
+      <div class="hero-stat"><strong>Jueves</strong><span>Día más activo</span></div>
       <div class="hero-stat"><strong>23hs</strong><span>Hora pico</span></div>
     </div>
     <p class="hero-period">Período analizado: enero — agosto 2026</p>
-  </header>: días de la semana -->
+  </header>
+
+  <!-- 1 — Flourish: días de la semana -->
   <section class="section fade-in">
     <p class="section-label">Patrón semanal</p>
     <h2>¿Qué días recurro más a Claude?</h2>
